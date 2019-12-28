@@ -6,7 +6,7 @@
 
 
 # Modular Development Skeleton
-Most frontend frameworks do too much. MDS doens't have even half of that.
+Most frontend frameworks do too much. MDS doesn't have even half of that.
 Uses <a href="https://www.webcomponents.org/introduction" target="_blank" rel="noopener noreferrer">webcomponents</a>.
 
 * Supports Hot Reload
