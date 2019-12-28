@@ -17,7 +17,7 @@ Uses <a href="https://www.webcomponents.org/introduction" target="_blank" rel="n
 
 Download or clone this repo.
 ```
-git clone https://github.com/Uzair-Fasih/Division.git
+git clone https://github.com/Uzair-Fasih/Modular-Division-Skeleton.git
 ```
 
 Install dependencies.
