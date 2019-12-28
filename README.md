@@ -8,6 +8,7 @@
 # Modular Development Skeleton
 Most frontend frameworks do too much. MDS doesn't have even half of that.
 Uses <a href="https://www.webcomponents.org/introduction" target="_blank" rel="noopener noreferrer">webcomponents</a>.
+[Find a demo here](http://www.uzairfasih.me/Modular-Division-Skeleton/dist/)
 
 * Supports Hot Reload
 
