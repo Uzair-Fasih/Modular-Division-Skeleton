@@ -62,7 +62,7 @@ function logMessage () {
 </script>
 ```
 
-Finally use your module in your html
+Finally use your module in your index.html
 
 ```HTML
 <html>

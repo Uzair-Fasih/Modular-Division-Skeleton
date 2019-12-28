@@ -1,0 +1,35 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: [gutter-start] 1fr [content-start] calc(100% - 20rem) [content-end] 1fr [gutter-end];
+  grid-template-rows: [gutter-start] 4rem [content-start] 1fr [content-end] 4rem [gutter-end];
+}
+
+.grid-content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  grid-row-start: content-start;
+  grid-row-end: content-end;
+}
+
+body {
+  background-color: #674baf;
+  background-image: url('../../static/images/bg.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.panel-component {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 80%;
+  height: max-content;
+  transform: translate(-50%, -50%);
+}

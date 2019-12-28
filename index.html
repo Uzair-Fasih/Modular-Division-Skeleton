@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+  <title>Huddle - Frontend Mentor Challenge</title>
 </head>
 <body>
-  Hello Divisions
-  <test-component></test-component>
-  <sample-component></sample-component>
-  <nested-component></nested-component>
-  <div class="hellomoto">
-    Good Bye Motocity
-  </div>
-  <script src="/socket.io/socket.io.js"></script>
-  <script>
+
+  <app-component></app-component>
+  
+  <!-- The below script files are only for development purposes. These will be removed in the final build. -->
+  <script id="hotreload" src="/socket.io/socket.io.js"></script>
+  <script id="webcomponent">
     let ts = document.createElement('script')
     document.body.appendChild(ts)
 
@@ -26,23 +24,24 @@
         document.clear()
         location.reload(true)
       }
+      console.log(components);
+      
       components.forEach(component => {
         if (component.js != '') ts.innerHTML += component.js
         window.customElements.define(component.el,
         class extends HTMLElement {
           constructor () {
             super()
-            if (component.scoped != '') {
+            if (component.scoped) {
               this.attachShadow({mode: 'open'})
               this.shadowRoot.innerHTML = `
                 ${component.html}
-                ${component.scoped != '' ? `<style>${component.scoped}</style>`: ''}
                 ${component.css != '' ? `<style>${component.css}</style>`: ''}
               `;
             }
           }
           connectedCallback() {
-            if (component.scoped == '') {
+            if (!component.scoped) {
               this.innerHTML = `
                 ${component.html}
                 ${component.css != '' ? `<style>${component.css}</style>`: ''}
@@ -53,6 +52,5 @@
       })
     })
   </script>
-
 </body>
 </html>

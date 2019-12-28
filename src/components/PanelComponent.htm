@@ -1,0 +1,82 @@
+<template scoped>
+  <div class="panel">
+    <img src="/static/images/illust.svg" />
+    <div class="hero">
+      <h2>
+        Build The Community Your Fans Will Love
+      </h2>
+
+      <p>
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
+      </p>
+
+      <button>Register</button>
+    </div>
+  </div>
+</template>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+html {
+  font-size: 10px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: max-content;
+  max-width: 100%;
+  margin: auto;
+}
+
+img {
+  width: 50%;
+}
+
+.hero {
+  width: 50%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+}
+
+
+h2 {
+  color: #FFF;
+  font-size: 3.5rem;
+  font-family: sans-serif;
+  margin: 2.5rem 0;
+}
+
+p {
+  color: #FFF;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+}
+
+button {
+  padding: .75rem 4rem;
+  width: max-content;
+  margin: 2rem 0;
+  border-radius: 50px;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  color: #674baf;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .25);
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1.75rem 1.25rem rgba(0, 0, 0, .25);
+}
+</style>
